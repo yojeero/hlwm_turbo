@@ -1,0 +1,183 @@
+#!/usr/bin/env bash
+
+# ==================================================
+# herbstluftwm 0.9.6 / @yojeero / 911 Theme
+# ==================================================
+
+hc() {
+    herbstclient "$@"
+}
+
+# --------------------------------------------------
+# Basic
+# --------------------------------------------------
+
+Mod=Mod4
+
+# Remove standard bindings
+hc keyunbind --all
+
+hc set always_show_frame 1
+hc set focus_follows_mouse 1
+
+# Don't allow applications to steal focus without permission
+hc set focus_stealing_prevention true
+
+# --------------------------------------------------
+# Appearance
+# --------------------------------------------------
+
+# Frame thickness
+hc set window_border_width 0
+
+# Border colors for active and inactive windows
+hc set window_border_active_color '#FB607F'
+hc set window_border_normal_color '#4c566a'
+
+# The frames of the empty frames themselves
+hc set frame_border_width 0
+hc set frame_bg_transparent 1
+hc set frame_transparent_width 0
+hc set frame_gap 8
+hc set frame_padding 0
+hc set mouse_recenter_gap 0
+hc set smart_frame_surroundings 1
+hc set smart_window_surroundings 0
+hc set window_gap 40
+
+# --------------------------------------------------
+# Tags
+# --------------------------------------------------
+
+# Leave 9 desktops
+hc rename default 1
+
+for tag in {2..9}; do
+    hc add "$tag"
+done
+
+# Super + 1..9
+for i in {1..9}; do
+    hc keybind "$Mod-$i" use_index "$((i - 1))"
+done
+
+# Super + Shift + 1..9
+# Move window to desktop
+for i in {1..9}; do
+    hc keybind "$Mod-Shift-$i" move_index "$((i - 1))"
+done
+
+# --------------------------------------------------
+# Focus
+# --------------------------------------------------
+
+# Super + h/j/k/l
+hc keybind "$Mod-h" focus left
+hc keybind "$Mod-j" focus down
+hc keybind "$Mod-k" focus up
+hc keybind "$Mod-l" focus right
+
+# --------------------------------------------------
+# Move windows
+# --------------------------------------------------
+
+# Super + Shift + h/j/k/l
+hc keybind "$Mod-Shift-h" shift left
+hc keybind "$Mod-Shift-j" shift down
+hc keybind "$Mod-Shift-k" shift up
+hc keybind "$Mod-Shift-l" shift right
+
+# --------------------------------------------------
+# Layout
+# --------------------------------------------------
+
+# Super + Space
+hc keybind "$Mod-space" cycle_layout +1
+
+# Sets a hard split to the right (horizontal).
+hc set default_frame_layout 1
+
+# open the first window to the right
+hc set_layout horizontal
+
+# Split frame manually
+hc keybind "$Mod-o" split right 0.5
+hc keybind "$Mod-u" split bottom 0.5
+
+# --------------------------------------------------
+# Fullscreen
+# --------------------------------------------------
+
+# Super + f
+hc keybind "$Mod-f" fullscreen toggle
+
+# --------------------------------------------------
+# Close window
+# --------------------------------------------------
+
+# Super + q
+hc keybind "$Mod-q" close
+
+# Super + Shift + q
+hc keybind "$Mod-Shift-q" spawn xkill
+
+# --------------------------------------------------
+# Applications
+# --------------------------------------------------
+
+# Terminal
+hc keybind "$Mod-Return" spawn alacritty -e fish --interactive
+
+# Rofi
+hc keybind "$Mod-d" spawn rofi -show drun
+
+# Thunar
+hc keybind "$Mod-e" spawn thunar
+
+# Mousepad
+hc keybind "$Mod-x" spawn mousepad
+
+# --------------------------------------------------
+# Lock screen
+# --------------------------------------------------
+
+hc keybind "$Mod-Shift-l" spawn i3lock -c 000000
+
+# --------------------------------------------------
+# Screenshot
+# --------------------------------------------------
+
+hc keybind Print spawn bash -c 'maim "$HOME/Screen/pic_$(date +%F_%T).png"'
+
+# --------------------------------------------------
+# Reload / quit
+# --------------------------------------------------
+
+# Super + Shift + r
+hc keybind "$Mod-Shift-r" reload
+
+# Super + Shift + e
+hc keybind "$Mod-Shift-e" quit
+
+# --------------------------------------------------
+# Polybar
+# --------------------------------------------------
+
+# Leave space under the Polybar on top
+hc pad 0 40 
+
+# hide/show Polybar by pressing Mod4 + B
+hc keybind Mod4-b chain , spawn polybar-msg cmd toggle , cycle_value window_gap 40 0 , cycle_value monitors.0.pad_up 40 0
+
+# Launch Polybar
+"$HOME/.config/polybar/launch.sh" &
+
+# Applications
+feh --bg-fill "$HOME/Pictures/911.jpg" &
+
+dunst &
+
+setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle" &
+
+picom --config ~/.config/picom/picom.conf &
+

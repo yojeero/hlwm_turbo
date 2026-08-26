@@ -1,0 +1,64 @@
+configuration {
+    show-icons: false;
+}
+
+window {
+    fullscreen: true;
+    background-color: #1f1f28;
+    children: [ mainbox ];
+}
+
+mainbox {
+    expand: true;
+    children: [ box ];
+    orientation: vertical;
+    background-color: transparent;
+}
+
+box {
+    expand: false;
+    padding: 0;    
+    background-color: transparent;
+    children: [ listview ];
+    margin: 42% 30%; 
+}
+
+listview {
+    columns: 3;           
+    lines: 1;             
+    fixed-columns: true; 
+    spacing: 8px;
+    background-color: transparent;
+}
+
+element {          
+    padding: 40px 0px; 
+    border-radius: 14px;
+    background-color: transparent;
+}
+
+element-text {
+    font: "JetBrains Mono Bold 12";
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    text-color: #dcd7ba;
+    background-color: transparent;
+}
+
+element selected.normal {
+    border:4;
+    border-color: #71D044;    
+}
+
+element selected.normal element-text {
+    text-color: #71D044; 
+}
+
+prompt,
+entry,
+inputbar,
+textbox-prompt-colon,
+message {
+    enabled: false;
+}

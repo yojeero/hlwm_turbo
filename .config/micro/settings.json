@@ -1,0 +1,7 @@
+{
+    "colorscheme": "kanagawa",
+    "gutter": true,
+    "mkparents": true,
+    "rmtrailingws": true,
+    "tabstospaces": true
+}

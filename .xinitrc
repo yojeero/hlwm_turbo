@@ -51,16 +51,16 @@ fi
 
 # single wm
 # exec bspwm
-# exec herbstluftwm
+exec herbstluftwm
 # exec i3
 
 # several wm
 
-case "$1" in
-    herbstluftwm|hlwm)
-        exec herbstluftwm
-        ;;
-    i3|*)
-        exec bspwm
-        ;;
-esac
+# case "$1" in
+#     herbstluftwm|hlwm)
+#         exec herbstluftwm
+#         ;;
+#     i3|*)
+#         exec bspwm
+#         ;;
+# esac

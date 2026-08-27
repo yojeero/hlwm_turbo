@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-SHUTDOWN="󰤆 Shutdown"
-REBOOT="󰑓 Reboot"
-LOGOUT="󰗼 Logout"
+SHUTDOWN="   Shutdown"
+REBOOT="   Reboot"
+LOGOUT="   Logout"
 
 if [ $# -eq 0 ]; then
     echo "$SHUTDOWN"

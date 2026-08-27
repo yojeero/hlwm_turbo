@@ -4,7 +4,7 @@ configuration {
 
 window {
     fullscreen: true;
-    background-color: #1f1f28;
+    background-color: #1f1f2833;
     children: [ mainbox ];
 }
 
@@ -34,11 +34,13 @@ listview {
 element {          
     padding: 40px 0px; 
     border-radius: 14px;
-    background-color: transparent;
+    border:1;
+    border-color: #4c566a; 
+    background-color: #1f1f2833;
 }
 
 element-text {
-    font: "JetBrains Mono Bold 12";
+    font: "Clear Sans 12";
     expand: true;
     horizontal-align: 0.5;
     vertical-align: 0.5;
@@ -47,7 +49,7 @@ element-text {
 }
 
 element selected.normal {
-    border:4;
+    border:1;
     border-color: #71D044;    
 }
 

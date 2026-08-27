@@ -13,8 +13,6 @@ Herbstluftwm 🐧 Dotfiles
 
 ## Kanagawa Theme
 
-### Login via TTY / Startx via Fish
-
 <img alt="Linux" src="https://img.shields.io/badge/Linux-ffc425?style=for-the-badge&logo=linux&logoColor=black" height="24"/><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo-6c5ce7?style=for-the-badge&logo=gentoo&logoColor=white" height="24"/><img alt="Debian" src="https://img.shields.io/badge/Debian-de324c?style=for-the-badge&logo=debian&logoColor=white" height="24"/><img alt="Suse" src="https://img.shields.io/badge/Suse-6ab04c?logo=opensuse&logoColor=fff&style=for-the-badge" height="24"/><img alt="Arch" src="https://img.shields.io/badge/Arch-0064b5?logo=arch-linux&logoColor=fff&style=for-the-badge" height="24"/><img alt="Alma" src="https://img.shields.io/badge/Alma-74b9ff?style=for-the-badge&logo=almalinux&logoColor=white" height="24"/>
 
 | **Window Manager** <img width="60"/> | `hlwm` <img width="140"/> |
@@ -40,15 +38,15 @@ Herbstluftwm 🐧 Dotfiles
 
 #### 1. Boot to the Arch iso
 
-```bash
+```
 archinstall
 
-on the step - profile - select > desktop > bspwm
+on the step - profile - select > desktop > minimal
 ```
 
 #### 2. After installing > reboot and update system
 
-```bash
+```
 sudo pacman -Syu
 
 sudo pacman -S \
@@ -58,7 +56,7 @@ sudo pacman -S \
 
 #### 3. Installing Herbstluftwm and basic utilities
 
-```bash
+```
 sudo pacman -S \
     herbstluftwm \
     alacritty polybar rofi picom feh \
@@ -67,7 +65,7 @@ sudo pacman -S \
 
 Give execution rights to configuration scripts:
 
-```bash
+```
 chmod +x ~/.config/herbsluftwm/autostart
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/hlwm-polybar/hlwm-tags.sh
@@ -75,7 +73,7 @@ chmod +x ~/.config/polybar/hlwm-polybar/hlwm-tags.sh
 
 #### 4. Installing basic applications and dependencies
 
-```bash
+```
 sudo pacman -S \
     firefox kitty micro mousepad \
     thunar thunar-archive-plugin thunar-volman \
@@ -89,7 +87,7 @@ sudo pacman -S \
 
 #### 5. Installing FISH (if want)
 
-```bash
+```
 sudo pacman -S fish eza fzf fd
 
 chsh -s $(command -v fish)
@@ -111,34 +109,70 @@ chsh -s $(command -v fish)
     └── picom/
 ```
 
-#### Another used Dots, Icons, Themes ...
+#### Used Dots, Icons, Themes, Wallpapers
 
-> [!IMPORTANT]
 > [yojeero/config_linux](https://github.com/yojeero/config_linux)
 
-#### Hide & show polybar & windows fix
+#### Hide/show polybar + full desktop windows
 
-> [!IMPORTANT]
 > use keybinding
 > `super + b `
 
 #### Folder for screenshots
 
-> [!IMPORTANT]
-> Create folder **Screen** for saving screenshots via maim.   
+> Create folder **Screen** for saving screenshots via maim.
 
-#### .xinitrc   
+---
 
-> [!IMPORTANT]
-> if start **Single WM** via .xinitrc - at the end > insert
+## Login via TTY
 
-```bash
+> ### Single WM
+
+#### .xinitrc
+
+> at the end > insert
+
+```
 exec herbstluftwm
 ```
 
-> if start **Several WM** via .xinitrc - at the end > insert
+#### config.fish
 
-```bash
+> at the end > insert
+
+```
+if status is-login
+    if test -z "$DISPLAY" -a (tty) = "/dev/tty1"
+        exec startx
+    end
+end
+```
+
+#### if using BASH
+
+#### .bash_profile
+
+> at the end > insert
+
+```
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
+```
+
+#### Login for Single WM
+
+> Arch Linux > login > pass
+
+---
+
+> ### Several WM
+
+#### .xinitrc
+
+> at the end > insert
+
+```
 case "$1" in
     herbstluftwm|hlwm)
         exec herbstluftwm
@@ -149,16 +183,15 @@ case "$1" in
 esac
 ```
 
-> for usefull insert alias in the config.fish
+#### config.fish
 
-```bash
-# login session
+> insert alias for usefull
+
+```
 abbr -a sx-bspwm 'startx'
 abbr -a sx-hlwm 'startx ~/.xinitrc herbstluftwm'
-```   
+```
 
-### Login for Single WM 
-> Arch Linux > login > pass   
+#### Login for Several WM
 
-### Login for Several WM 
 > Arch Linux > login > pass > sx-hlwm

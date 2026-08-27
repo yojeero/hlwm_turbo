@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";   
-    font: "JetBrains Mono Bold 10"; 
+    font: "Clear Sans 11";  
     show-icons: true;
     icon-theme: "Papirus"; 
     terminal: "alacritty";

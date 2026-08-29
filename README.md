@@ -85,7 +85,7 @@ sudo pacman -S \
     imagemagick ffmpeg lxappearance glib2
 ```
 
-#### 5. Installing FISH (if want)
+#### 5. Installing FISH
 
 ```
 sudo pacman -S fish eza fzf fd
@@ -148,50 +148,68 @@ if status is-login
 end
 ```
 
-#### if using BASH
-
-#### .bash_profile
-
-> at the end > insert
-
-```
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
-fi
-```
-
 #### Login for Single WM
 
 > Arch Linux > login > pass
 
 ---
 
-> ### Several WM
+> ### x11 + Wayland wm
 
 #### .xinitrc
 
 > at the end > insert
 
 ```
-case "$1" in
-    herbstluftwm|hlwm)
-        exec herbstluftwm
-        ;;
-    bspwm|*)
-        exec bspwm
-        ;;
-esac
+if [ -n "$1" ]; then
+    exec "$1"
+else
+    exec herbstluftwm
+fi
 ```
 
 #### config.fish
 
-> insert alias for usefull
+> Interactive session selection when logging into TTY1
 
 ```
-abbr -a sx-bspwm 'startx'
-abbr -a sx-hlwm 'startx ~/.xinitrc herbstluftwm'
+if status is-interactive; and test (tty) = "/dev/tty1"
+    echo "==================================="
+    echo " Run Hypr or HLWM:   "
+    echo " [1] Hyprland (Wayland)              "
+    echo " [2] herbstluftwm (X11)           "
+    echo " [3] Stay in TTY      "
+    echo "==================================="
+
+    read -P "Select [1-3]: " choice
+
+    switch $choice
+        case 1
+            echo "Start Hyprland (Wayland)..."
+            set -gx XDG_CURRENT_DESKTOP Hyprland
+            set -gx XDG_SESSION_DESKTOP Hyprland
+            set -gx XDG_SESSION_TYPE wayland
+            set -gx MOZ_ENABLE_WAYLAND 1
+            set -gx QT_QPA_PLATFORM wayland
+
+            exec Hyprland
+
+        case 2
+            echo "Start herbstluftwm (X11)..."
+            # For X11 using ~/.xinitrc
+            exec startx (which herbstluftwm)
+
+        case 3
+            echo "Enter to TTY!"
+
+        case '*'
+            echo "Bad step. Stay in TTY."
+    end
+end
 ```
 
-#### Login for Several WM
+#### Login for Dual WM
 
-> Arch Linux > login > pass > sx-hlwm
+        ├── [1] Hyprland (Wayland)
+        ├── [2] herbstluftwm (X11)
+        └── [3] Stay in TTY

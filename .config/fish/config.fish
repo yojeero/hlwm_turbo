@@ -100,13 +100,46 @@ if test -f /etc/profile.env
     sed -E 's/^export ([A-Za-z0-9_]+)=(.*)$/set -gx \1 \2/' /etc/profile.env | source
 end
 
-# login session
-abbr -a sx-bspwm 'startx'
-abbr -a sx-hlwm 'startx ~/.xinitrc herbstluftwm'
+# Interactive session selection when logging into TTY1
+if status is-interactive; and test (tty) = "/dev/tty1"
+    echo "==================================="
+    echo " Run Hypr or HLWM:   "
+    echo " [1] Hyprland (Wayland)              "
+    echo " [2] herbstluftwm (X11)           "
+    echo " [3] Stay in TTY      "
+    echo "==================================="
+    
+ # Read the user's choice
+    read -P "Select [1-3]: " choice
 
-if status is-login
-    if test -z "$DISPLAY" -a (tty) = "/dev/tty1"
-        exec startx
+    switch $choice
+        case 1
+            echo "Start Hyprland (Wayland)..."
+            set -gx XDG_CURRENT_DESKTOP Hyprland
+            set -gx XDG_SESSION_DESKTOP Hyprland
+            set -gx XDG_SESSION_TYPE wayland
+            set -gx MOZ_ENABLE_WAYLAND 1
+            set -gx QT_QPA_PLATFORM wayland
+            
+            exec Hyprland
+
+        case 2
+            echo "Start herbstluftwm (X11)..."
+            # For X11 using ~/.xinitrc
+     # We pass the WM name as an argument
+            exec startx (which herbstluftwm)
+
+        case 3
+            echo "Enter to TTY!"
+            
+        case '*'
+            echo "Bad step. Stay in TTY."
     end
 end
+
+
+ 
+
+
+
 

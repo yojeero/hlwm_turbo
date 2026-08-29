@@ -50,17 +50,28 @@ on the step - profile - select > desktop > minimal
 sudo pacman -Syu
 
 sudo pacman -S \
-    xorg-server xorg-xinit \
-    xorg-xrandr xorg-xset xorg-xsetroot
+    xorg-server \
+    xorg-xinit \
+    xorg-xrandr \
+    xorg-xset \
+    xorg-xsetroot
 ```
 
 #### 3. Installing Herbstluftwm and basic utilities
 
 ```
 sudo pacman -S \
-    herbstluftwm \
-    alacritty polybar rofi picom feh \
-    maim slop xclip dunst i3lock
+herbstluftwm \
+    alacritty \
+    polybar \
+    rofi \
+    picom \
+    feh \
+    maim \
+    slop \
+    xclip \
+    dunst \
+    i3lock
 ```
 
 Give execution rights to configuration scripts:
@@ -75,20 +86,61 @@ chmod +x ~/.config/polybar/hlwm-polybar/hlwm-tags.sh
 
 ```
 sudo pacman -S \
-    firefox kitty micro mousepad \
-    thunar thunar-archive-plugin thunar-volman \
-    gvfs udisks2 ntfs-3g tumbler \
-    fastfetch mc xarchiver btop \
-    p7zip unzip zip tar atool \
-    wget git curl xdg-utils ripgrep zoxide \
-    xfce4-screenshooter celluloid rhythmbox imv \
-    imagemagick ffmpeg lxappearance glib2
+
+alacritty \
+   kitty \
+   foot \
+   micro \
+   mousepad \
+   firefox
+
+thunar \
+   thunar-archive-plugin \
+   thunar-volman
+
+fastfetch \
+   mc \
+   xarchiver \
+   tumbler \
+   btop
+
+p7zip \
+   unzip \
+   zip \
+   tar \
+   atool
+
+wget \
+   git \
+   curl \
+   gvfs \
+   udisks2 \
+   ntfs-3g
+
+xdg-utils \
+   ripgrep \
+   zoxide \
+   xfce4-screenshooter
+
+imv \
+   celluloid \
+   rhythmbox \
+   imagemagick \
+   ffmpeg
+
+lxappearance \
+   glib2 \
+   gcolor3
 ```
 
 #### 5. Installing FISH
 
 ```
-sudo pacman -S fish eza fzf fd
+sudo pacman -S \
+fish \
+   eza \
+   fzf \
+   fd
 
 chsh -s $(command -v fish)
 ```

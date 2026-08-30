@@ -176,7 +176,7 @@ chsh -s $(command -v fish)
 
 ---
 
-## Login via TTY
+## Login TTY
 
 > ### x11 wm
 
@@ -200,7 +200,7 @@ if status is-login
 end
 ```
 
-#### Login for Single WM
+#### Login x11 wm
 
 > Arch Linux > login > pass
 

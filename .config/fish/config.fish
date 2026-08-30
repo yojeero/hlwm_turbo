@@ -95,39 +95,41 @@ end
 # Purpose of the Ctrl + G key
 bind \cg fzf_change_directory
 
+# ----------------------------------
 # Import Gentoo system environment 
+# ----------------------------------
 if test -f /etc/profile.env
     sed -E 's/^export ([A-Za-z0-9_]+)=(.*)$/set -gx \1 \2/' /etc/profile.env | source
 end
 
-# Interactive session selection when logging into TTY1
+# ----------------------------------
+# Interactive session TTY1
+# ----------------------------------
 if status is-interactive; and test (tty) = "/dev/tty1"
     echo "==================================="
-    echo " Run Hypr or HLWM:   "
-    echo " [1] Hyprland (Wayland)              "
-    echo " [2] herbstluftwm (X11)           "
+    echo " Run HLWM or Sway:   "
+    echo " [1] herbstluftwm (X11)           "
+    echo " [2] Sway (Wayland)              "
     echo " [3] Stay in TTY      "
     echo "==================================="
     
- # Read the user's choice
+    # Read the user's choice
     read -P "Select [1-3]: " choice
 
     switch $choice
         case 1
-            echo "Start Hyprland (Wayland)..."
-            set -gx XDG_CURRENT_DESKTOP Hyprland
-            set -gx XDG_SESSION_DESKTOP Hyprland
+            echo "Start herbstluftwm (X11)..."    
+            exec startx (which herbstluftwm)
+
+        case 2
+            echo "Start Sway (Wayland)..."
+            set -gx XDG_CURRENT_DESKTOP sway
+            set -gx XDG_SESSION_DESKTOP sway
             set -gx XDG_SESSION_TYPE wayland
             set -gx MOZ_ENABLE_WAYLAND 1
             set -gx QT_QPA_PLATFORM wayland
             
-            exec Hyprland
-
-        case 2
-            echo "Start herbstluftwm (X11)..."
-            # For X11 using ~/.xinitrc
-     # We pass the WM name as an argument
-            exec startx (which herbstluftwm)
+            exec sway
 
         case 3
             echo "Enter to TTY!"
@@ -136,6 +138,7 @@ if status is-interactive; and test (tty) = "/dev/tty1"
             echo "Bad step. Stay in TTY."
     end
 end
+
 
 
  

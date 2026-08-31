@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center"> -->
 
 $$\text{\Huge Herbstluftwm 🐧 Dotfiles}$$
 
@@ -11,7 +11,7 @@ $$\text{\Huge Turbo Theme}$$
 <img src="screen/1.png" alt="Preview" width="40%" max-width="800px"><img src="screen/2.png" alt="Preview" width="40%" max-width="800px">
 <img src="screen/3.png" alt="Preview" width="40%" max-width="800px"><img src="screen/4.png" alt="Preview" width="40%" max-width="800px">
 
-</div>
+<!-- </div> -->
 
 ### 2 modes
 

@@ -6,8 +6,6 @@ Herbstluftwm 🐧 Dotfiles
 
 2 modes
 
-###
-
 <img src="screen/1.png" alt="Preview" width="50%" max-width="800px"><img src="screen/2.png" alt="Preview" width="50%" max-width="800px">
 <img src="screen/3.png" alt="Preview" width="50%" max-width="800px"><img src="screen/4.png" alt="Preview" width="50%" max-width="800px">
 
@@ -19,7 +17,7 @@ Herbstluftwm 🐧 Dotfiles
 
 ## 2 operating modes
 
-> Polybar is visible > gaps in 40 > normal mode
+> Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
 | **Window Manager** <img width="60"/> | `hlwm` <img width="140"/> |

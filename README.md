@@ -13,7 +13,7 @@
 
 <img alt="Linux" src="https://img.shields.io/badge/Linux-ffc425?style=for-the-badge&logo=linux&logoColor=black" height="24"/><img alt="Gentoo" src="https://img.shields.io/badge/Gentoo-6c5ce7?style=for-the-badge&logo=gentoo&logoColor=white" height="24"/><img alt="Debian" src="https://img.shields.io/badge/Debian-de324c?style=for-the-badge&logo=debian&logoColor=white" height="24"/><img alt="Suse" src="https://img.shields.io/badge/Suse-6ab04c?logo=opensuse&logoColor=fff&style=for-the-badge" height="24"/><img alt="Arch" src="https://img.shields.io/badge/Arch-0064b5?logo=arch-linux&logoColor=fff&style=for-the-badge" height="24"/><img alt="Alma" src="https://img.shields.io/badge/Alma-74b9ff?style=for-the-badge&logo=almalinux&logoColor=white" height="24"/>
 
-#### 2 modes
+### 2 modes
 
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
@@ -177,9 +177,7 @@ chsh -s $(command -v fish)
 
 > Create folder **Screen** for saving screenshots via maim.
 
----
-
-## Login TTY
+### Login TTY
 
 > ### x11 wm
 
@@ -207,8 +205,6 @@ end
 
 > Arch Linux > login > pass
 
----
-
 > ### x11/wayland wm
 
 #### .xinitrc
@@ -228,9 +224,6 @@ fi
 > Interactive session selection when logging into TTY1
 
 ```
-# ----------------------------------
-# Interactive session TTY1
-# ----------------------------------
 if status is-interactive; and test (tty) = "/dev/tty1"
     echo "==================================="
     echo " Run HLWM or Sway:   "
@@ -268,6 +261,6 @@ end
 
 #### Login to x11/wayland wm
 
-        ├── [1] herbstluftwm (X11)
-        ├── [2] Sway (Wayland)
-        └── [3] Stay in TTY
+    ├── [1] herbstluftwm (X11)
+    ├── [2] Sway (Wayland)
+    └── [3] Stay in TTY

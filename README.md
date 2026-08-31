@@ -1,8 +1,11 @@
 <!-- <div align="center"> -->
 
-|                            |
-| :------------------------- |
-| # Herbstluftwm 🐧 Dotfiles |
+<details open>
+<summary></summary>
+
+# Herbstluftwm 🐧 Dotfiles
+
+</details>
 
 <img alt="Arch" src="https://img.shields.io/badge/Arch-0064b5?logo=arch-linux&logoColor=fff&style=for-the-badge" height="40"/><img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" height="40"/>
 

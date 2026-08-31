@@ -36,46 +36,13 @@ if test -f /etc/profile.env
 end
 
 # ----------------------------------
-# Interactive session TTY1
+# Sway TTY1
 # ----------------------------------
-if status is-interactive; and test (tty) = "/dev/tty1"
-    echo "==================================="
-    echo " Run HLWM or Sway:   "
-    echo " [1] herbstluftwm (X11)           "
-    echo " [2] Sway (Wayland)              "
-    echo " [3] Stay in TTY      "
-    echo "==================================="
-    
-    # Read the user's choice
-    read -P "Select [1-3]: " choice
 
-    switch $choice
-        case 1
-            echo "Start herbstluftwm (X11)..."    
-            exec startx (which herbstluftwm)
+set -gx XDG_CURRENT_DESKTOP sway
+set -gx XDG_SESSION_DESKTOP sway
+set -gx XDG_SESSION_TYPE wayland
+set -gx MOZ_ENABLE_WAYLAND 1
+set -gx QT_QPA_PLATFORM wayland
 
-        case 2
-            echo "Start Sway (Wayland)..."
-            set -gx XDG_CURRENT_DESKTOP sway
-            set -gx XDG_SESSION_DESKTOP sway
-            set -gx XDG_SESSION_TYPE wayland
-            set -gx MOZ_ENABLE_WAYLAND 1
-            set -gx QT_QPA_PLATFORM wayland
-            
-            exec sway
-
-        case 3
-            echo "Enter to TTY!"
-            
-        case '*'
-            echo "Bad step. Stay in TTY."
-    end
-end
-
-
-
- 
-
-
-
-
+exec sway

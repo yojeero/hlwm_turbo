@@ -1,13 +1,15 @@
 <h1 align="center">
 
-Herbstluftwm 🐧 Dotfiles
+🐧
+
+Herbstluftwm Dotfiles
 
 <img alt="Arch" src="https://img.shields.io/badge/Arch-0064b5?logo=arch-linux&logoColor=fff&style=for-the-badge" height="40"/><img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" height="40"/>
 
 <br>
 
-<img src="screen/1.png" alt="Preview" width="50%" max-width="800px"><img src="screen/2.png" alt="Preview" width="50%" max-width="800px">
-<img src="screen/3.png" alt="Preview" width="50%" max-width="800px"><img src="screen/4.png" alt="Preview" width="50%" max-width="800px">
+<img src="screen/1.png" alt="Preview" width="40%" max-width="800px"><img src="screen/2.png" alt="Preview" width="40%" max-width="800px">
+<img src="screen/3.png" alt="Preview" width="40%" max-width="800px"><img src="screen/4.png" alt="Preview" width="40%" max-width="800px">
 
 </h1>
 

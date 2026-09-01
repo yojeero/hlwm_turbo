@@ -8,8 +8,8 @@ Herbstluftwm Dotfiles
 
 <br>
 
-<img src="screen/1.png" alt="Preview" width="40%" max-width="800px"><img src="screen/2.png" alt="Preview" width="40%" max-width="800px">
-<img src="screen/3.png" alt="Preview" width="40%" max-width="800px"><img src="screen/4.png" alt="Preview" width="40%" max-width="800px">
+<img src="screen/1.png" alt="Preview" width="50%" max-width="800px"><img src="screen/2.png" alt="Preview" width="50%" max-width="800px">
+<img src="screen/3.png" alt="Preview" width="50%" max-width="800px"><img src="screen/4.png" alt="Preview" width="50%" max-width="800px">
 
 </h1>
 

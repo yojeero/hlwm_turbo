@@ -134,9 +134,6 @@ hc keybind "$Mod-d" spawn rofi -show drun
 # Thunar
 hc keybind "$Mod-e" spawn thunar
 
-# Mousepad
-hc keybind "$Mod-x" spawn mousepad
-
 # --------------------------------------------------
 # Lock screen
 # --------------------------------------------------
@@ -173,7 +170,7 @@ hc keybind Mod4-b chain , spawn polybar-msg cmd toggle , cycle_value window_gap 
 "$HOME/.config/polybar/launch.sh" &
 
 # Applications
-feh --bg-fill "$HOME/Pictures/911.jpg" &
+feh --bg-fill "$HOME/Pictures/luxe.jpg" &
 
 dunst &
 

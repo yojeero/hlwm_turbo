@@ -170,7 +170,7 @@ hc keybind Mod4-b chain , spawn polybar-msg cmd toggle , cycle_value window_gap 
 "$HOME/.config/polybar/launch.sh" &
 
 # Applications
-feh --bg-fill "$HOME/Pictures/luxe.jpg" &
+feh --bg-fill "$HOME/Pictures/911.jpg" &
 
 dunst &
 

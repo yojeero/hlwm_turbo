@@ -8,6 +8,7 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 set -gx MICRO_TRUECOLOR 1
+set -gx TERMINAL alacritty
 
 # nano
 abbr -a n nano

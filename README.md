@@ -1,7 +1,5 @@
 <h1 align="center">
 
-🐧
-
 Herbstluftwm Dotfiles   
 
 `Arch`   

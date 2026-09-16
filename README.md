@@ -2,9 +2,7 @@
 
 Herbstluftwm Dotfiles   
 
-`Arch`   
-
-:secret:   
+`Arch`  
 
 <br>
 

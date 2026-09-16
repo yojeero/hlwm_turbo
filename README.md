@@ -1,17 +1,7 @@
-<h1 align="center">
-
-Herbstluftwm Dotfiles   
-
-`Arch`  
-
-<br>
-
 <img src="screen/1.png" alt="Preview" width="50%" max-width="800px"><img src="screen/2.png" alt="Preview" width="50%" max-width="800px">
 <img src="screen/3.png" alt="Preview" width="50%" max-width="800px"><img src="screen/4.png" alt="Preview" width="50%" max-width="800px">
 
-</h1>
-
-### Turbo Theme   
+# Herbstluftwm `Arch`  
 
 ### 2 modes
 
@@ -28,7 +18,7 @@ Herbstluftwm Dotfiles
 | **Screenshot**                       | `maim`                    |
 | **Viewer**                           | `imv`                     |
 
-#### Fonts / Theme
+### Fonts / Theme
 
 **Symbols Nerd Font** - icons, interface, development.  
 **JetBrains Mono** - system font and interface.
@@ -37,9 +27,9 @@ Herbstluftwm Dotfiles
 **Kanagawa** - Theme  
 **Gruvbox** - Icons
 
-### Installation
+## Installation
 
-#### 1. Boot to the Arch iso
+### 1. Boot to the Arch iso
 
 ```
 archinstall
@@ -47,7 +37,7 @@ archinstall
 on the step - profile - select > desktop > minimal
 ```
 
-#### 2. After installing - Reboot and update system
+### 2. After installing - Reboot and update system
 
 ```
 sudo pacman -Syu
@@ -60,7 +50,7 @@ sudo pacman -S \
     xorg-xsetroot
 ```
 
-#### 3. Installing Herbstluftwm
+### 3. Installing Herbstluftwm
 
 ```
 sudo pacman -S \
@@ -85,7 +75,7 @@ chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/hlwm-polybar/hlwm-tags.sh
 ```
 
-#### 4. Installing Pkgs
+### 4. Installing Pkgs
 
 ```
 sudo pacman -S \
@@ -131,7 +121,7 @@ imv \
    lxappearance
 ```
 
-#### 5. Installing FISH
+### 5. Installing FISH
 
 ```
 sudo pacman -S \
@@ -143,7 +133,7 @@ fish \
 chsh -s $(command -v fish)
 ```
 
-#### Home Structure
+### Home Structure
 
 ```text
 ~/
@@ -159,19 +149,19 @@ chsh -s $(command -v fish)
     └── picom/
 ```
 
-#### Used Dots, Icons, Themes, Wallpapers
+### Used Dots, Icons, Themes, Wallpapers
 
 > [yojeero/config_linux](https://github.com/yojeero/config_linux)
 
-#### Folder for screenshots
+### Folder for screenshots
 
 > Create folder **Screen** for saving screenshots via maim.
 
-### Login TTY
+## Login TTY
 
 > ### x11 wm
 
-#### .xinitrc
+### .xinitrc
 
 > at the end > insert
 
@@ -179,7 +169,7 @@ chsh -s $(command -v fish)
 exec herbstluftwm
 ```
 
-#### config.fish
+### config.fish
 
 > at the end > insert
 
@@ -191,13 +181,13 @@ if status is-login
 end
 ```
 
-#### Login x11 wm
+## Login x11 wm
 
 > Arch Linux > login > pass
 
 > ### x11/wayland wm
 
-#### .xinitrc
+### .xinitrc
 
 > at the end > insert
 
@@ -209,7 +199,7 @@ else
 fi
 ```
 
-#### config.fish
+### config.fish
 
 > Interactive session selection when logging into TTY1
 
@@ -249,7 +239,7 @@ if status is-interactive; and test (tty) = "/dev/tty1"
 end
 ```
 
-#### Login to x11/wayland wm
+## Login to x11/wayland wm
 
     ├── [1] herbstluftwm (X11)
     ├── [2] Sway (Wayland)

@@ -157,7 +157,7 @@ chsh -s $(command -v fish)
 
 > Create folder **Screen** for saving screenshots via maim.
 
-### :label: Login via TTY
+### :label: Login TTY
 
 > #### x11 wm
 
@@ -181,7 +181,7 @@ if status is-login
 end
 ```
 
-### :label: Login to the x11 WM
+### :label: Login x11 wm
 
 > Arch Linux > login > pass
 
@@ -239,7 +239,7 @@ if status is-interactive; and test (tty) = "/dev/tty1"
 end
 ```
 
-### :label: Login to the x11/wayland WM
+### :label: Login x11/wayland wm
 
     ├── [1] herbstluftwm (X11)
     ├── [2] Sway (Wayland)

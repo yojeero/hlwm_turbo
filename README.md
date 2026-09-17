@@ -161,7 +161,7 @@ chsh -s $(command -v fish)
 
 ### 🐧 Login TTY
 
-#### x11 wm
+### x11 wm
 
 #### .xinitrc
 
@@ -189,7 +189,7 @@ end
 > [!TIP]
 > Arch Linux > login > pass
 
-#### x11/wayland wm
+### 🐧 x11/wayland wm
 
 #### .xinitrc
 

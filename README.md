@@ -3,8 +3,7 @@
 
 <img src="https://img.shields.io/badge/Herbstluftwm_Arch-7678ed?style=for-the-badge" width="40%" alt="Herbstluftwm Arch">
 
-#### 2 modes   
-
+> [!TIP]
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
@@ -27,7 +26,7 @@
 **Kanagawa** - Theme  
 **Gruvbox** - Icons
 
-## :books: Installation
+### 🧼 Installation
 
 #### 1. Boot to the Arch iso
 
@@ -67,6 +66,7 @@ herbstluftwm \
     i3lock
 ```
 
+> [!IMPORTANT]
 > Give execution rights to configuration scripts
 
 ```
@@ -151,18 +151,21 @@ chsh -s $(command -v fish)
 
 #### Used Dots, Icons, Themes, Wallpapers
 
+> [!NOTE]
 > [yojeero/config_linux](https://github.com/yojeero/config_linux)
 
 #### Folder for screenshots
 
+> [!NOTE]
 > Create folder **Screen** for saving screenshots via maim.
 
-### :label: Login TTY
+### 🐧 Login TTY
 
-> #### x11 wm
+#### x11 wm
 
 #### .xinitrc
 
+> [!TIP]
 > at the end > insert
 
 ```
@@ -181,14 +184,16 @@ if status is-login
 end
 ```
 
-### :label: Login x11 wm
+### 🐧 Login x11 wm
 
+> [!TIP]
 > Arch Linux > login > pass
 
-> #### x11/wayland wm
+#### x11/wayland wm
 
 #### .xinitrc
 
+> [!TIP]
 > at the end > insert
 
 ```
@@ -201,6 +206,7 @@ fi
 
 #### config.fish
 
+> [!TIP]
 > Interactive session selection when logging into TTY1
 
 ```
@@ -239,7 +245,7 @@ if status is-interactive; and test (tty) = "/dev/tty1"
 end
 ```
 
-### :label: Login x11/wayland wm
+### 🐧 Login x11/wayland wm
 
     ├── [1] herbstluftwm (X11)
     ├── [2] Sway (Wayland)

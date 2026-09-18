@@ -16,6 +16,7 @@
 | **Compositor**                       | picom                   |
 | **Screenshot**                       | maim                    |
 | **Viewer**                           | imv                     |
+| <img width="80"/> | <img width="140"/>    |
 
 #### Fonts / Theme
 

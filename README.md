@@ -1,9 +1,8 @@
-<h1 align="center">
-<img src="https://img.shields.io/badge/Herbstluftwm-7678ed?style=for-the-badge" height="40"><img src="https://img.shields.io/badge/Arch-7678ed?style=for-the-badge" height="40">
-</h1>
+<img src="screen/1.png" alt="Preview">
 
-<img src="screen/1.png" alt="Preview" width="50%"><img src="screen/2.png" alt="Preview" width="50%">
-<img src="screen/3.png" alt="Preview" width="50%"><img src="screen/4.png" alt="Preview" width="50%">
+<div>
+<img src="https://img.shields.io/badge/Herbstluftwm-7678ed?style=for-the-badge" height="40"> <img src="https://img.shields.io/badge/Arch-7678ed?style=for-the-badge" height="40">
+</div>
 
 > [!TIP]
 > Polybar is visible > gaps in 40 > normal mode  

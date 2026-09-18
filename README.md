@@ -6,7 +6,7 @@
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
-| **Window Manager** <img width="100"/> | hlwm <img width="200"/> |
+| **Window Manager** <img width="20"/> | hlwm <img width="40"/> |
 | :------------- | :------------ |
 | **Status bar**                        | polybar                 |
 | **Terminal**                          | alacritty               |

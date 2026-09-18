@@ -1,12 +1,12 @@
 <img src="screen/1.png" alt="Preview" width="50%"><img src="screen/2.png" alt="Preview" width="50%"><img src="screen/3.png" alt="Preview" width="50%"><img src="screen/4.png" alt="Preview" width="50%">
 
-<img src="https://img.shields.io/badge/Herbstluftwm-7678ed?style=for-the-badge" width="40%" alt="Herbstluftwm"> 
+<img src="https://img.shields.io/badge/HLWM-7678ed?style=for-the-badge" width="40%" alt="HLWM"> 
 
 > [!TIP]
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
-| **Window Manager** <img width="20"/> | `hlwm` <img width="60"/> |
+| **Window Manager** <img width="20"/> | `Herbstluftwm` <img width="60"/> |
 | :----------------------------------- | :----------------------- |
 | **Status bar**                       | `polybar`                |
 | **Terminal**                         | `alacritty`              |

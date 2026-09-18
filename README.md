@@ -6,15 +6,15 @@
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
-| **Window Manager** <img width="20"/> | hlwm <img width="40"/> |
-| :------------- | :------------ |
-| **Status bar**                        | polybar                 |
-| **Terminal**                          | alacritty               |
-| **Launcher**                          | rofi                    |
-| **Wallpaper**                         | feh                     |
-| **Compositor**                        | picom                   |
-| **Screenshot**                        | maim                    |
-| **Viewer**                            | imv                     |
+| **Window Manager** <img width="20"/> | hlwm <img width="60"/> |
+| :----------------------------------- | :--------------------- |
+| **Status bar**                       | polybar                |
+| **Terminal**                         | alacritty              |
+| **Launcher**                         | rofi                   |
+| **Wallpaper**                        | feh                    |
+| **Compositor**                       | picom                  |
+| **Screenshot**                       | maim                   |
+| **Viewer**                           | imv                    |
 
 #### Fonts / Theme
 

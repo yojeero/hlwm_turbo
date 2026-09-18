@@ -8,6 +8,7 @@
 
 | **Distro**  | arch  |
 | :------------- | :------------ |
+| <img width="200"/> | <img width="200"/>    |
 | **Window Manager**                   | hlwm                 |
 | **Status bar**                       | polybar                 |
 | **Terminal**                         | alacritty               |
@@ -16,7 +17,7 @@
 | **Compositor**                       | picom                   |
 | **Screenshot**                       | maim                    |
 | **Viewer**                           | imv                     |
-| <img width="80"/> | <img width="140"/>    |
+
 
 #### Fonts / Theme
 

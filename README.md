@@ -1,14 +1,14 @@
 <img src="screen/1.png" alt="Preview" width="50%"><img src="screen/2.png" alt="Preview" width="50%"><img src="screen/3.png" alt="Preview" width="50%"><img src="screen/4.png" alt="Preview" width="50%">
 
-<img src="https://img.shields.io/badge/Herbstluftwm-7678ed?style=for-the-badge" width="80%">   
-<img src="https://img.shields.io/badge/Arch-7678ed?style=for-the-badge" width="40%">
+<img src="https://img.shields.io/badge/Herbstluftwm-7678ed?style=for-the-badge" width="50%"> 
 
 > [!TIP]
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
-| **Window Manager** <img width="60"/> | `hlwm` <img width="140"/> |
+| **Distro** <img width="60"/> | `arch` <img width="140"/> |
 | :----------------------------------- | :------------------------ |
+| **Window Manager**                   | `hlwm`                 |
 | **Status bar**                       | `polybar`                 |
 | **Terminal**                         | `alacritty`               |
 | **Launcher**                         | `rofi`                    |

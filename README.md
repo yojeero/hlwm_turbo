@@ -6,8 +6,8 @@
 > Polybar is visible > gaps in 40 > normal mode  
 > Polybar is hide > `super + b ` > gaps in 0 > working mode
 
-| **Distro** <img width="60"/> | `arch` <img width="140"/> |
-| :----------------------------------- | :------------------------ |
+| **Distro**  | `arch`  |
+| :------------- <img width="60"/> | :------------ <img width="140"/> |
 | **Window Manager**                   | `hlwm`                 |
 | **Status bar**                       | `polybar`                 |
 | **Terminal**                         | `alacritty`               |
